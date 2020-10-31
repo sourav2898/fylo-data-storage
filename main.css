@@ -139,3 +139,117 @@ html, body{
     margin-top: 4px;
     font-size: 12px;
 }
+
+.container .right .mob-tool-tip{
+    display: none;
+    position: relative;
+    background: #fff;
+    width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    color: var(--Grayish-Blue);
+    text-align: center;
+    padding: 10px;
+    top: 40px;
+    left: 40px;
+}
+
+.container .right .mob-tool-tip span{
+    font-size: 40px;
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+}
+
+.container .right .data-bar .tooltip{
+    visibility: hidden;
+    width: 150px;
+    height: 80px;
+    bottom: 250%;
+    left: 80%;
+    margin-left: -60px;
+    background-color: #fff;
+    color: var(--Very-Dark-Blue);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.tooltip::after{
+    content: " ";
+    position: absolute;
+    top: 99%; 
+    right: 1px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.container .right .data-bar .tooltip span{
+    font-size: 40px;
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+}
+
+.container .right .data-bar:hover .tooltip{
+    visibility: visible;
+}
+
+@media screen and (max-width:550px){
+    html, body{
+        background-image: url(images/bg-mobile.png);
+    }
+    
+    .container{
+        position: static;
+        display: block;
+        padding: 100px 50px 0 50px;
+        width: 450px;
+    }
+    
+    .container .column{
+        margin: 20px;
+    }
+    
+    .container .left{
+        width: 100%;
+    }
+    
+    .container .right{
+        width: 100%;
+        position: static;
+    }
+    
+    .container .left .folders{
+        width: 230px;
+    }
+    
+    .container .left .folders .document{
+        height: 50px;
+        width: 50px;
+    }
+    
+    .container .right{
+        height: 180px;
+    }
+    
+    .container .right .description {
+        text-align: center;
+    }
+    
+    .container .right .data-bar::after{
+        left: 68%;
+    }
+    
+    .container .right .mob-tool-tip{
+        display: block;
+    }
+    
+    .container .right .data-bar .tooltip{
+        display: none;
+    }
+    
+}
