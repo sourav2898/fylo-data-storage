@@ -1,0 +1,141 @@
+:root{
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+
+*{
+    font-family: 'Raleway' , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--Very-Dark-Blue);
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
+}
+
+.container{
+    position: absolute;
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    left: 20%;
+    top: 33%;
+    box-sizing: border-box;
+}
+
+.container .column{
+    background: var(--Dark-Blue);
+}
+
+.container .left{
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 25px;
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+.container .left .logo img{
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.container .left .folders{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 180px;
+    margin-top: 30px;
+}
+
+.container .left .folders .document{
+    background: var(--Very-Dark-Blue);
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding-top: 10px; 
+    border-radius: 5px;
+}
+
+.container .left .folders .document:nth-child(2){
+    padding-top: 12px;
+}
+
+.container .left .folders .document:nth-child(3){
+    padding-top: 15px;
+}
+
+.container .right{
+    position: relative;
+    left: 20px;
+    padding: 45px 30px;
+    width: 60%;
+    height: 150px;
+    top: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.container .right .description{
+    margin-bottom: 10px;
+}
+
+.container .right .description p span{
+    font-style: oblique;
+}
+
+.container .right .data-bar{
+    position: relative;
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--Very-Dark-Blue);
+}
+
+.container .right .data-bar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 71%;
+    top: 4px;
+    left: 4px;
+    height: 65%;
+    border-radius: 10px;
+    background-image: linear-gradient(hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+}
+
+.container .right .data-bar::after{
+    content: "";
+    position: absolute;
+    background: var(--Pale-Blue);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 5px;
+    left: 69%;
+}
+
+.container .right .data-used{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 4px;
+    font-size: 12px;
+}
